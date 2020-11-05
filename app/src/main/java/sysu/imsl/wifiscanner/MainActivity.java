@@ -152,8 +152,13 @@ public class MainActivity extends AppCompatActivity {
                                 boolean success = wifiManager.startScan();
 
                                 SystemClock.sleep(SCAN_INTERVAL * 1000);
-                                if (success)
+                                if (success) {
                                     saveAllScanRes();
+                                    Log.d("scan res", "scan success");
+                                }
+                                else{
+                                    Log.d("scan res", "scan failed");
+                                }
                                 unregisterReceiver(wifiScanReceiver);
                             }
                             dialog.dismiss();

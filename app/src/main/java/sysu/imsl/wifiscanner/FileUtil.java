@@ -36,9 +36,10 @@ public class FileUtil {
     public static File createFile(String file_name){
         File file = new File(file_path + file_name);
         try{
-            if(!file.exists())
+            if(!file.exists()) {
                 file.createNewFile();
-            Log.d("File create", file_name);
+                Log.d("File create", file_name);
+            }
 
         }catch (IOException e ){
             Log.e("File create error", e.getMessage() );
