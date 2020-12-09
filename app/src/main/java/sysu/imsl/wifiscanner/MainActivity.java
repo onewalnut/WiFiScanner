@@ -253,7 +253,7 @@ public class MainActivity extends AppCompatActivity {
         // Initial RSSI array
         int[] RSSI = new int[LOC_AP_MACS.size()];
         for(int i= 0 ; i < RSSI.length; i++) {
-            RSSI[i] = 0;
+            RSSI[i] = -100;
         }
 
         for(ScanResult sc : scanResultList){
@@ -283,7 +283,7 @@ public class MainActivity extends AppCompatActivity {
             for(int j = 0 ; j < LOC_AP_MACS.size() ; j++){
                 rssi_sum += RSSIs[i][j];
             }
-            if(rssi_sum == 0){
+            if(rssi_sum == -100 * LOC_AP_MACS.size()){
                 state[i] = false;
                 continue;
             }
@@ -296,11 +296,14 @@ public class MainActivity extends AppCompatActivity {
 //                stateSum++;
 //        }
 
+        String scan_res_str = "";
         if(stateSum == 0){
+            scan_res_str += "Wi-Fi扫描失败";
             Toast.makeText(MainActivity.this, "Wi-Fi扫描失败", Toast.LENGTH_SHORT).show();
             return " Scan Failed!";
         }
         else{
+            scan_res_str += "Wi-Fi有效扫描" + stateSum + "次";
             Toast.makeText(MainActivity.this, "Wi-Fi有效扫描" + stateSum + "次", Toast.LENGTH_SHORT).show();
         }
 
@@ -335,7 +338,7 @@ public class MainActivity extends AppCompatActivity {
         else{
             Toast.makeText(MainActivity.this, "数据存储成功", Toast.LENGTH_SHORT).show();
         }
-        return RSSI_str;
+        return scan_res_str;
     }
 
     private void saveAllScanRes(){
