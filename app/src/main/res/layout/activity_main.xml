@@ -36,35 +36,75 @@
         </Switch>
 
     </LinearLayout>
+
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="388dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_margin="10dp">
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Coordinate X :   "/>
+            android:text="Coordinate X :   " />
+
         <EditText
             android:id="@+id/edt_coordinateX"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_width="185dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"/>
+
+        <Button
+            android:id="@+id/Xsub"
+            android:layout_width="37dp"
+            android:layout_height="wrap_content"
+            android:onClick="Xsub"
+            android:text="-"
+            android:layout_marginRight="4dp"/>
+
+        <Button
+            android:id="@+id/Xadd"
+            android:layout_width="37dp"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:onClick="Xadd"
+            android:layout_marginLeft="4dp"
+            />
 
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="388dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_margin="10dp">
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Coordinate Y :   "/>
+            android:text="Coordinate Y :   " />
+
         <EditText
             android:id="@+id/edt_coordinateY"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_width="185dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"/>
+
+        <Button
+            android:id="@+id/Ysub"
+            android:layout_width="37dp"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:onClick="Ysub"
+            android:layout_marginRight="4dp"/>
+
+        <Button
+            android:id="@+id/Yadd"
+            android:layout_width="37dp"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:onClick="Yadd"
+            android:layout_marginLeft="4dp"/>
 
     </LinearLayout>
 
