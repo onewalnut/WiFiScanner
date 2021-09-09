@@ -358,5 +358,44 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(MainActivity.this, "数据存储成功", Toast.LENGTH_SHORT).show();
         }
     }
-
+    public void Xsub(View view){
+        EditText ev = (EditText) findViewById(R.id.edt_coordinateX);
+        String s = ev.getText().toString();
+        if(s.length()>0){
+            int num = Integer.parseInt(s);
+            num--;
+            String temp = num+"";
+            ev.setText(temp);
+        }
+    }
+    public void Xadd(View view){
+        EditText ev = (EditText) findViewById(R.id.edt_coordinateX);
+        String s = ev.getText().toString();
+        if(s.length()>0){
+            int num = Integer.parseInt(s);
+            num++;
+            String temp = num+"";
+            ev.setText(temp);
+        }
+    }
+    public void Ysub(View view){
+        EditText ev = (EditText) findViewById(R.id.edt_coordinateY);
+        String s = ev.getText().toString();
+        if(s.length()>0){
+            int num = Integer.parseInt(s);
+            num--;
+            String temp = num+"";
+            ev.setText(temp);
+        }
+    }
+    public void Yadd(View view){
+        EditText ev = (EditText) findViewById(R.id.edt_coordinateY);
+        String s = ev.getText().toString();
+        if(s.length()>0){
+            int num = Integer.parseInt(s);
+            num++;
+            String temp = num+"";
+            ev.setText(temp);
+        }
+    }
 }
